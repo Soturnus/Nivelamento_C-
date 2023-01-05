@@ -55,9 +55,9 @@ for (int i = 0; i < 3; i++)
 
 
 Console.WriteLine("Exercicio 05 - Estrutura Sequencial");
-//Codigo da Peça - Numero de Peças - Valor Unitário;
 for (int i = 0; i < 3; i++)
 {
+    //Codigo da Peça - Numero de Peças - Valor Unitário;
     int cod1, cod2, qte1, qte2;
     double preco1, preco2, total;
 
@@ -77,7 +77,7 @@ for (int i = 0; i < 3; i++)
     Console.WriteLine("VALOR A PAGAR: R$ " + total.ToString("F2", CultureInfo.InvariantCulture));
 }
 
-Console.WriteLine("Exercicio 6- Estrutura Sequencial");
+Console.WriteLine("Exercicio 6 - Estrutura Sequencial");
 
 for (int i = 0; i < 2; i++)
 {
@@ -103,3 +103,201 @@ for (int i = 0; i < 2; i++)
 
 }
 
+Console.WriteLine("Exercicio 1 - Estrutura Condicional");
+for (int i = 0; i < 3; i++)
+{
+    int numero = int.Parse(Console.ReadLine());
+
+    if (numero < 0)
+    {
+        Console.WriteLine("NEGATIVO");
+    }
+    else
+    {
+        Console.WriteLine("NAO NEGATIVO");
+    }
+}
+
+
+Console.WriteLine("Exercicio 2 - Estrutura Condicional");
+for (int i = 0; i < 3; i++)
+{
+    int numero = int.Parse(Console.ReadLine());
+
+    if (numero % 2 == 0)
+    {
+        Console.WriteLine("PAR");
+    }
+    else
+    {
+        Console.WriteLine("IMPAR");
+    }
+}
+
+Console.WriteLine("Exercicio 3 - Estrutura Condicional");
+for (int i = 0; i < 3; i++)
+{
+    string[] valores = Console.ReadLine().Split(' ');
+    int A = int.Parse(valores[0]);
+    int B = int.Parse(valores[1]);
+
+    if (A % B == 0 || B % A == 0)
+    {
+        Console.WriteLine("Sao Multiplos");
+    }
+    else
+    {
+        Console.WriteLine("Nao sao Multiplos");
+    }
+}
+
+Console.WriteLine("Exercicio 4 - Estrutura Condicional");
+for (int i = 0; i < 3; i++)
+{
+    string[] valores = Console.ReadLine().Split(' ');
+    int horaInicial = int.Parse(valores[0]);
+    int horaFinal = int.Parse(valores[1]);
+
+    int duracao;
+    if (horaInicial < horaFinal)
+    {
+        duracao = horaFinal - horaInicial;
+    }
+    else
+    {
+        duracao = 24 - horaInicial + horaFinal;
+    }
+
+    Console.WriteLine("O JOGO DUROU " + duracao + " HORA(S)");
+}
+
+Console.WriteLine("Exercicio 5 - Estrutura Condicional");
+for (int i = 0; i < 3; i++)
+{
+    string[] valores = Console.ReadLine().Split(' ');
+    int codigo = int.Parse(valores[0]);
+    int quantidade = int.Parse(valores[1]);
+
+    double total;
+    if (codigo == 1)
+    {
+        total = quantidade * 4.0;
+    }
+    else if (codigo == 2)
+    {
+        total = quantidade * 4.5;
+    }
+    else if (codigo == 3)
+    {
+        total = quantidade * 5.0;
+    }
+    else if (codigo == 4)
+    {
+        total = quantidade * 2.0;
+    }
+    else
+    {
+        total = quantidade * 1.5;
+    }
+
+    Console.WriteLine("Total: R$ " + total.ToString("F2", CultureInfo.InvariantCulture));
+}
+
+
+Console.WriteLine("Exercicio 6 - Estrutura Condicional");
+for (int i = 0; i < 3; i++)
+{
+
+    double numero = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+    if (numero < 0.0 || numero > 100.0)
+    {
+        Console.WriteLine("Fora de intervalo");
+    }
+    else if (numero <= 25.0)
+    {
+        Console.WriteLine("Intervalo [0,25]");
+    }
+    else if (numero <= 50.0)
+    {
+        Console.WriteLine("Intervalo (25,50]");
+    }
+    else if (numero <= 75.0)
+    {
+        Console.WriteLine("Intervalo (50,75]");
+    }
+    else
+    {
+        Console.WriteLine("Intervalo (75,100]");
+    }
+}
+
+Console.WriteLine("Exercicio 7 - Estrutura Condicional");
+for (int i = 0; i < 3; i++)
+{
+    string[] valores = Console.ReadLine().Split(' ');
+    double x = double.Parse(valores[0], CultureInfo.InvariantCulture);
+    double y = double.Parse(valores[1], CultureInfo.InvariantCulture);
+
+    if (x == 0.0 && y == 0.0)
+    {
+        Console.WriteLine("Origem");
+    }
+    else if (x == 0.0)
+    {
+        Console.WriteLine("Eixo Y");
+    }
+    else if (y == 0.0)
+    {
+        Console.WriteLine("Eixo X");
+    }
+    else if (x > 0.0 && y > 0.0)
+    {
+        Console.WriteLine("Q1");
+    }
+    else if (x < 0.0 && y > 0.0)
+    {
+        Console.WriteLine("Q2");
+    }
+    else if (x < 0.0 && y < 0.0)
+    {
+        Console.WriteLine("Q3");
+    }
+    else
+    {
+        Console.WriteLine("Q4");
+    }
+}
+
+Console.WriteLine("Exercicio 8 - Estrutura Condicional");
+for (int i = 0; i < 3; i++)
+{
+    double salario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+    double imposto;
+    if (salario <= 2000.0)
+    {
+        imposto = 0.0;
+    }
+    else if (salario <= 3000.0)
+    {
+        imposto = (salario - 2000.0) * 0.08;
+    }
+    else if (salario <= 4500.0)
+    {
+        imposto = (salario - 3000.0) * 0.18 + 1000.0 * 0.08;
+    }
+    else
+    {
+        imposto = (salario - 4500.0) * 0.28 + 1500.0 * 0.18 + 1000.0 * 0.08;
+    }
+
+    if (imposto == 0.0)
+    {
+        Console.WriteLine("Isento");
+    }
+    else
+    {
+        Console.WriteLine("R$ " + imposto.ToString("F2", CultureInfo.InvariantCulture));
+    }
+}
